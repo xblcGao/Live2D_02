@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>角色变化</title>
+</head>
+<body>
+<div style="position:absolute;left:50%;bottom:0px;width:500px;"><canvas id="live2d" width="500" height="800"></canvas></div>
+<div style="position:absolute;left:10px;bottom:15px;"><input type="button" value="变化" id="btn" onClick="HZ_click()"></div>
+<script src="Live2d.js"></script>
+<script>
+	var Num=0;
+	loadlive2d("live2d", "ryoufuku.model.json");
+	function HZ_click() { 
+		if(Num==0){Num=1;loadlive2d("live2d", "seifuku.model.json");}
+		else if(Num==1){Num=2;loadlive2d("live2d", "shifuku.model.json");}
+		else{Num=0;loadlive2d("live2d", "ryoufuku.model.json");}
+	}
+</script>
+</body>
+</html>
